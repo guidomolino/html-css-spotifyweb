@@ -62,5 +62,20 @@ main{
   text-decoration: none;
   margin: 0 15px;
   font-size: 14px;
-  color: rgb(98, 98, 98)
+  color: rgb(98, 98, 98);
+}
+
+.box-item{
+  height: 22px;
+}
+
+#m-nav a:hover{
+  color:white;
+}
+
+.box-item:hover{
+  background-image: linear-gradient(green, green);
+  background-repeat: no-repeat;
+  background-size: 50px 15%;
+  background-position: center bottom;
 }
