@@ -25,6 +25,12 @@ main{
   top: 0;
 }
 
+.centratura{
+  padding: 2%;
+  background-color: #141922FF;
+  color: white;
+}
+
 /* upgrade */
 
 #upgrade{
@@ -79,3 +85,38 @@ main{
   background-size: 50px 15%;
   background-position: center bottom;
 }
+
+/* recently played */
+
+.played h3{
+  font-size: 30px;
+}
+
+.played .container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.played-item{
+  width:200px;
+  height:auto;
+  text-align: center;
+
+}
+
+.played-item img{
+  width: 100%;
+  height: auto;
+}
+
+.played-item h4{
+  margin: 10px 0;
+}
+
+.played-item p{
+  color: rgb(98, 98, 98);
+}
+
+/* personale */
