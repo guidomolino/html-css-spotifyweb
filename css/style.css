@@ -77,11 +77,10 @@ main .container{
 
 #m-nav{
   background-color: #141922FF;
-  padding: 20px 0;
 }
 
 #m-nav .container{
-  margin-top: none;
+  margin-top: 0;
   justify-content: center;
 }
 
@@ -93,7 +92,7 @@ main .container{
 }
 
 .box-item{
-  height: 22px;
+  padding: 25px 0;
 }
 
 #m-nav a:hover{
