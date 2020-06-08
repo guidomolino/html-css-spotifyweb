@@ -5,6 +5,17 @@
   font-family: 'Ubuntu', sans-serif;
 }
 
+.centratura{
+  padding: 2%;
+  background-color: #141922FF;
+  color: white;
+}
+
+
+h3{
+  font-size: 30px;
+}
+
 /* NAV SINISTRA */
 
 nav{
@@ -23,12 +34,6 @@ main{
   position: relative;
   right: -250px;
   top: 0;
-}
-
-.centratura{
-  padding: 2%;
-  background-color: #141922FF;
-  color: white;
 }
 
 /* upgrade */
@@ -67,7 +72,7 @@ main{
 #m-nav a{
   text-decoration: none;
   margin: 0 15px;
-  font-size: 14px;
+  font-size: 16px;
   color: rgb(98, 98, 98);
 }
 
@@ -88,14 +93,9 @@ main{
 
 /* recently played */
 
-.played h3{
-  font-size: 30px;
-}
-
 .played .container{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   margin-top: 40px;
 }
 
@@ -103,6 +103,7 @@ main{
   width:200px;
   height:auto;
   text-align: center;
+  margin-right: 20px;
 
 }
 
@@ -111,12 +112,67 @@ main{
   height: auto;
 }
 
-.played-item h4{
+h4{
   margin: 10px 0;
+  font-size: 20px;
 }
 
 .played-item p{
   color: rgb(98, 98, 98);
+  font-size: 15px;
 }
 
 /* personale */
+
+.personal p{
+  color: rgb(98, 98, 98);
+  font-size: 15px;
+  margin: 10px 0;
+}
+
+.personal .container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 40px;
+}
+
+.personal-item{
+  width: 200px;
+  height: auto;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.personal-item img{
+  width: 100%;
+  height: auto;
+}
+
+/* artisti popolari */
+
+.artists p{
+  color: rgb(98, 98, 98);
+  font-size: 15px;
+  margin: 10px 0;
+}
+
+.artists .container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 40px;
+}
+
+.artists-item{
+  width: 200px;
+  height: auto;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.artists-item img{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
