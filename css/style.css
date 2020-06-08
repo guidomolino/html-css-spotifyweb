@@ -36,6 +36,23 @@ main{
   top: 0;
 }
 
+main h4{
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+main p{
+  color: rgb(98, 98, 98);
+  font-size: 15px;
+  margin: 10px 0;
+}
+
+main .container{
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
 /* upgrade */
 
 #upgrade{
@@ -64,8 +81,7 @@ main{
 }
 
 #m-nav .container{
-  display: flex;
-  flex-direction: row;
+  margin-top: none;
   justify-content: center;
 }
 
@@ -93,12 +109,6 @@ main{
 
 /* recently played */
 
-.played .container{
-  display: flex;
-  flex-direction: row;
-  margin-top: 40px;
-}
-
 .played-item{
   width:200px;
   height:auto;
@@ -112,30 +122,7 @@ main{
   height: auto;
 }
 
-h4{
-  margin: 10px 0;
-  font-size: 20px;
-}
-
-.played-item p{
-  color: rgb(98, 98, 98);
-  font-size: 15px;
-}
-
 /* personale */
-
-.personal p{
-  color: rgb(98, 98, 98);
-  font-size: 15px;
-  margin: 10px 0;
-}
-
-.personal .container{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin-top: 40px;
-}
 
 .personal-item{
   width: 200px;
@@ -151,19 +138,6 @@ h4{
 
 /* artisti popolari */
 
-.artists p{
-  color: rgb(98, 98, 98);
-  font-size: 15px;
-  margin: 10px 0;
-}
-
-.artists .container{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin-top: 40px;
-}
-
 .artists-item{
   width: 200px;
   height: auto;
@@ -175,4 +149,10 @@ h4{
   width: 100%;
   height: auto;
   border-radius: 50%;
+}
+
+@media all and (max-width:1200px) {
+  main .container{
+    flex-wrap: wrap;
+  }
 }
