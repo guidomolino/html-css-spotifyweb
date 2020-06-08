@@ -6,7 +6,7 @@
 }
 
 .centratura{
-  padding: 2%;
+  padding: 15px 15px;
   background-color: #141922FF;
   color: white;
 }
@@ -26,6 +26,73 @@ nav{
   height: 100vh;
   width: 250px;
 }
+
+#logo{
+  width: 65%;
+  height: auto;
+  margin: 20px 7% 0 7%;
+}
+
+nav section{
+  margin: 30px 7%;
+  color: rgb(98, 98, 98);
+}
+
+/* tools */
+
+.nav-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.nm-item{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.nm-item img{
+  width: 13%;
+  height: auto;
+  margin-right: 5px;
+}
+
+/* playlist */
+
+.playlist h4{
+  color: white;
+}
+
+.create{
+  display: flex;
+  align-items: center;
+}
+
+.create i{
+  font-size: 45px;
+  margin:20px 10px 20px 0;
+}
+
+.playlist ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px;
+}
+
+.playlist ul li{
+  list-style: none;
+}
+
+.playlist ul li a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
 
 /* MAIN */
 
@@ -137,6 +204,10 @@ main .container{
 
 /* artisti popolari */
 
+.artists{
+  padding-bottom: 100px;
+}
+
 .artists-item{
   width: 200px;
   height: auto;
@@ -154,4 +225,14 @@ main .container{
   main .container{
     flex-wrap: wrap;
   }
+}
+
+/* PLAYER */
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #282828FF;
 }
