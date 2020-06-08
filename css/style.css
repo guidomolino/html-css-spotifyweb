@@ -2,4 +2,65 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* NAV SINISTRA */
+
+nav{
+  background-color: #000;
+  position: fixed;
+  left: 0;
+  top:0;
+  height: 100vh;
+  width: 250px;
+}
+
+/* MAIN */
+
+main{
+  width: calc(100% - 250px);
+  position: relative;
+  right: -250px;
+  top: 0;
+}
+
+/* upgrade */
+
+#upgrade{
+  background-color: #080B12FF;
+  padding: 40px 0;
+  height: auto;
+}
+
+#upgrade a{
+  float: right;
+  padding: 10px 20px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 20px;
+  display: block;
+  margin: -20px 10px;
+}
+
+/* main navbar */
+
+#m-nav{
+  background-color: #141922FF;
+  padding: 20px 0;
+}
+
+#m-nav .container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#m-nav a{
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 14px;
+  color: rgb(98, 98, 98)
 }
