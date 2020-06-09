@@ -23,7 +23,7 @@ nav{
   position: fixed;
   left: 0;
   top:0;
-  height: 90vh;
+  height: calc(100% - 100px);
   width: 250px;
 }
 
@@ -81,14 +81,17 @@ nav section{
 }
 
 .playlist ul{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 350px;
+  height: 200px;
+  overflow: scroll;
+}
+
+.playlist ul::-webkit-scrollbar {
+  display: none;
 }
 
 .playlist ul li{
   list-style: none;
+  margin: 15px 0;
 }
 
 .playlist ul li a{
@@ -276,6 +279,82 @@ footer{
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 10vh;
+  height: 100px;
+  padding:25px 15px;
   background-color: #282828FF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+}
+
+footer a{
+  color: inherit;
+}
+/* sinistra */
+.current{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 15%;
+}
+
+.current-item{
+  color: rgb(98, 98, 98);
+}
+
+.current-item h5{
+  font-size: 18px;
+  color: white;
+}
+
+.current-item i{
+  font-size: 22px;
+  margin: 3px;
+}
+
+.current-item img{
+  width: 80px;
+  height: auto;
+}
+/* centrale */
+
+.player{
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.player .items{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+}
+
+
+/* destra */
+
+.settings{
+  width: 15%;
+  margin-top: 30px;
+}
+
+.settings ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.settings ul i{
+  color: white;
+}
+
+.settings hr{
+  width: 150px;
+  border: 2px solid white;
+  border-radius: 10px;
 }
