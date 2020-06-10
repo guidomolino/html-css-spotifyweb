@@ -14,7 +14,8 @@
     <!-- NAV SINISTRA -->
     <nav>
       <!-- logo -->
-      <img id="logo" src="img/logo.svg" alt="Spotify">
+      <img id="logo1" src="img/logo.svg" alt="Spotify">
+      <img id="logo2" src="img/logo-small.svg" alt="Spotify">
       <!-- main -->
       <section class="nav-main">
         <div class="nm-item">
@@ -182,15 +183,17 @@
         </div>
       </div>
 
+      <!-- parte centrale -->
       <div class="player">
-        <!-- icone -->
-        <div class="items">
-          <a class="i-item" href="#"><i class="fas fa-random"></i></a>
-          <a class="i-item" href="#"><i class="fas fa-step-backward"></i></a>
-          <a class="i-item" href="#"><i class="far fa-play-circle"></i></a>
-          <a class="i-item" href="#"><i class="fas fa-step-forward"></i></a>
-          <a class="i-item" href="#"><i class="fas fa-redo-alt"></i></a>
+        <!-- buttons -->
+        <div class="p-button">
+          <a class="button-item" href="#"><i class="fas fa-random"></i></a>
+          <a class="button-item" href="#"><i class="fas fa-step-backward"></i></a>
+          <a class="button-item" href="#"><i class="far fa-play-circle"></i></a>
+          <a class="button-item" href="#"><i class="fas fa-step-forward"></i></a>
+          <a class="button-item" href="#"><i class="fas fa-redo-alt"></i></a>
         </div>
+        <!-- time bar -->
         <div class="time">
           <div class="time-item">
             <span>0:25</span>
@@ -205,12 +208,18 @@
       </div>
       <!-- impostazioni audio -->
       <div class="settings">
-        <ul>
-          <li><a href="#"><i class="fas fa-list"></i></a></li>
-          <li><a href="#"><i class="fas fa-desktop"></i></a></li>
-          <li><a href="#"><i class="fas fa-volume"></i></a></li>
-          <li><a href="#"><hr></a></li>
-        </ul>
+        <div class="settings-item">
+          <a href="#"><i class="fas fa-list"></i></a>
+        </div>
+        <div class="settings-item">
+          <a href="#"><i class="fas fa-desktop"></i></a>
+        </div>
+        <div class="settings-item">
+          <a href="#"><i class="fas fa-volume-up"></i></a>
+        </div>
+        <div class="settings-item">
+          <a href="#"><hr></a>
+        </div>
       </div>
     </footer>
   </body>

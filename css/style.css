@@ -27,10 +27,17 @@ nav{
   width: 250px;
 }
 
-#logo{
+#logo1{
   width: 65%;
   height: auto;
   margin: 20px 7% 0 7%;
+}
+
+#logo2{
+  display: none;
+  width: 66%;
+  height: auto;
+  margin: 20px 17% 0 17%;
 }
 
 nav section{
@@ -57,7 +64,7 @@ nav section{
 .nm-item img{
   width: 13%;
   height: auto;
-  margin-right: 5px;
+  margin-right: 2%;
 }
 
 /* playlist */
@@ -103,8 +110,8 @@ nav section{
 
 .nav-footer{
   position: absolute;
-  bottom: 2px;
-  margin-top: 0;
+  bottom: 5px;
+  margin-top: 3px;
 }
 
 .download{
@@ -140,6 +147,52 @@ nav section{
   color: white;
 }
 
+@media all and (max-width:720px) {
+  nav{
+    width: 50px;
+  }
+
+  #logo1{
+    display: none;
+  }
+
+  #logo2{
+    display: block;
+  }
+
+  nav span{
+    display: none;
+  }
+
+  .nm-item{
+    display: block;
+    width: 100%;
+  }
+
+  .nm-item img{
+    width: 68%;
+    margin: 0 16%;
+  }
+
+  .playlist{
+    display: none;
+  }
+
+  .download img{
+    width: 44%;
+    margin: 20px 28%;
+  }
+
+  .nav-footer hr{
+    display: none;
+  }
+
+  .profile img{
+    width: 54%;
+    margin: 0 23%;
+  }
+}
+
 /* MAIN */
 
 main{
@@ -147,6 +200,13 @@ main{
   position: relative;
   right: -250px;
   top: 0;
+}
+
+@media all and (max-width:720px) {
+  main{
+    width: calc(100% - 50px);
+    right: -50px
+  }
 }
 
 main h4{
@@ -164,6 +224,12 @@ main .container{
   display: flex;
   flex-direction: row;
   margin-top: 40px;
+}
+
+@media all and (max-width:1200px) {
+  main .container{
+    flex-wrap: wrap;
+  }
 }
 
 /* upgrade */
@@ -212,22 +278,28 @@ main .container{
   color:white;
 }
 
-.box-item:hover{
+.box-item:active{
   background-image: linear-gradient(green, green);
   background-repeat: no-repeat;
-  background-size: 50px 10%;
-  background-position: center bottom;
+  background-size: 50px 6%;
+  background-position: center bottom 25%;
 }
 
-/* recently played */
+/* play hover */
 
-.played-item{
+.played-item, .personal-item, .artists-item{
   width:200px;
   height:auto;
   text-align: center;
   margin-right: 20px;
-
 }
+
+.played-item:hover, .personal-item:hover, .artists-item:hover{
+  filter: contrast(120%);
+  cursor:pointer;
+}
+
+/* recently played */
 
 .played-item img{
   width: 100%;
@@ -236,12 +308,6 @@ main .container{
 
 /* personale */
 
-.personal-item{
-  width: 200px;
-  height: auto;
-  text-align: center;
-  margin-right: 20px;
-}
 
 .personal-item img{
   width: 100%;
@@ -254,23 +320,10 @@ main .container{
   padding-bottom: 100px;
 }
 
-.artists-item{
-  width: 200px;
-  height: auto;
-  text-align: center;
-  margin-right: 20px;
-}
-
 .artists-item img{
   width: 100%;
   height: auto;
   border-radius: 50%;
-}
-
-@media all and (max-width:1200px) {
-  main .container{
-    flex-wrap: wrap;
-  }
 }
 
 /* PLAYER */
@@ -280,7 +333,7 @@ footer{
   bottom: 0;
   width: 100%;
   height: 100px;
-  padding:25px 15px;
+  padding:25px 1%;
   background-color: #282828FF;
   display: flex;
   flex-direction: row;
@@ -311,7 +364,7 @@ footer a{
 
 .current-item i{
   font-size: 22px;
-  margin: 3px;
+  margin: 0 1%;
 }
 
 .current-item img{
@@ -327,34 +380,103 @@ footer a{
   justify-content: space-between;
 }
 
-.player .items{
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
+/* buttons */
 
+.player .p-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.player .p-button .button-item{
+  margin: 0 2%;
+  font-size: 16px;
 }
 
+.p-button .button-item:nth-child(3) {
+  font-size: 35px;
+  margin: 0 3%;
+}
+
+/* time bar */
+
+.player .time{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.time .time-item:nth-child(2){
+  width: 85%;
+}
+
+.time-item hr{
+  border-radius: 10px;
+  border: 2px solid rgb(98, 98, 98);
+  margin: 20px 3%;
+}
 
 /* destra */
 
 .settings{
   width: 15%;
   margin-top: 30px;
-}
-
-.settings ul{
-  list-style-type: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  min-width: 200px;
 }
 
-.settings ul i{
+.settings .settings-item i{
   color: white;
 }
 
-.settings hr{
+.settings .settings-item hr{
   width: 150px;
-  border: 2px solid white;
+  border: 2px solid rgb(98, 98, 98);
   border-radius: 10px;
+}
+
+@media all and (max-width:1300px) {
+  .current{
+    width: 22%;
+  }
+
+  .player{
+    width: 40%;
+  }
+
+  .settings{
+    width: 22%;
+    min-width: 100px;
+  }
+
+  .settings .settings-item hr{
+    width: 80px;
+  }
+}
+
+@media all and (max-width:720px) {
+  footer{
+    justify-content: flex-start;
+  }
+
+  .current{
+    width: 30%;
+  }
+
+  .player{
+    width: 40%;
+  }
+
+  .settings{
+    width: 30%;
+    min-width: 100px;
+  }
+
+  .settings .settings-item hr{
+    width: 80px;
+  }
 }
