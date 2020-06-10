@@ -243,13 +243,21 @@ main .container{
 #upgrade a{
   float: right;
   padding: 10px 20px;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid rgb(149, 149, 149);
+  color: rgb(149, 149, 149);
   text-decoration: none;
   font-size: 12px;
   border-radius: 20px;
   display: block;
-  margin: -20px 10px;
+  margin: -20px 2%;
+}
+
+#upgrade a:hover{
+  border: 2px solid white;
+  padding: 12px 22px;
+  font-size: 13px;
+  margin: -23px 1%;
+  color: white;
 }
 
 /* main navbar */
@@ -285,7 +293,7 @@ main .container{
   background-position: center bottom 25%;
 }
 
-/* play hover */
+/* Sezioni brani */
 
 .played-item, .personal-item, .artists-item{
   width:200px;
@@ -295,36 +303,50 @@ main .container{
 }
 
 .played-item:hover, .personal-item:hover, .artists-item:hover{
-  filter: contrast(120%);
+  filter: brightness(60%);
   cursor:pointer;
 }
 
-/* recently played */
+.played-item:hover .play-icon{
+  display: block;
+}
 
-.played-item img{
+.personal-item:hover .play-icon{
+  display: block;
+}
+
+.artists-item:hover .play-icon{
+  display: block;
+}
+
+.personal-item img,.artists-item img,.played-item img{
   width: 100%;
   height: auto;
 }
 
-/* personale */
-
-
-.personal-item img{
-  width: 100%;
-  height: auto;
+.artists-item img{
+  border-radius: 50%;
 }
-
-/* artisti popolari */
 
 .artists{
   padding-bottom: 100px;
 }
 
-.artists-item img{
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
+.play-icon{
+  position: absolute;
+  display: none;
+  top:70px;
+  width:100%;
+  left:0px;
+  right:0px;
+  z-index:100;
 }
+
+.play-icon i{
+  font-size: 60px;
+}
+
+
 
 /* PLAYER */
 
