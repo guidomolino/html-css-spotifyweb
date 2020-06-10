@@ -65,7 +65,21 @@ nav section{
   width: 13%;
   height: auto;
   margin-right: 2%;
+  filter: opacity(60%);
 }
+
+.nm-item:hover{
+  color: white;
+  background-image: linear-gradient(green, green);
+  background-repeat: no-repeat;
+  background-size: 4px 100%;
+  background-position: left;
+}
+
+.nm-item:hover img{
+  filter: none;
+}
+
 
 /* playlist */
 
@@ -73,13 +87,15 @@ nav section{
   color: white;
 }
 
-.create{
-  display: flex;
-  align-items: center;
-}
-
 .create a{
   color: inherit;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.create a:hover{
+  color: white;
 }
 
 .create i{
@@ -101,6 +117,10 @@ nav section{
   margin: 15px 0;
 }
 
+.playlist ul li:hover{
+  color: white;
+}
+
 .playlist ul li a{
   text-decoration: none;
   color: inherit;
@@ -117,6 +137,11 @@ nav section{
 .download{
   display: flex;
   align-items: center;
+}
+
+.download:hover{
+  color: white;
+  cursor: pointer;
 }
 
 .download img{
@@ -379,14 +404,41 @@ footer a{
   color: rgb(98, 98, 98);
 }
 
+.current-item:last-child{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 20%;
+}
+
 .current-item h5{
   font-size: 18px;
   color: white;
+  margin: 0 8px;
+}
+
+.current-item h5:hover{
+  text-decoration:underline;
+  cursor: pointer;
+}
+
+.current-item p{
+  margin: 0 8px;
+}
+
+.current-item p:hover{
+  text-decoration:underline;
+  color: white;
+  cursor: pointer;
 }
 
 .current-item i{
   font-size: 22px;
-  margin: 0 1%;
+}
+
+.current-item i:hover{
+  color: white;
 }
 
 .current-item img{
@@ -432,12 +484,47 @@ footer a{
 
 .time .time-item:nth-child(2){
   width: 85%;
+  display: flex;
 }
 
-.time-item hr{
+
+.current-time {
+  width: 30%;
+
+}
+
+.total-time {
+  width: 70%;
+
+}
+
+.current-time hr{
+  border-radius: 10px;
+  border: 2px solid white;
+  margin: 20px 0 20px 3%;
+}
+
+.total-time hr{
   border-radius: 10px;
   border: 2px solid rgb(98, 98, 98);
-  margin: 20px 3%;
+  margin: 20px 3% 20px 0;
+}
+
+.time-item:nth-child(2) .time-dot{
+  display: none;
+}
+
+.time-item:nth-child(2):hover{
+  cursor: pointer;
+}
+
+.time-item:nth-child(2):hover .time-dot{
+  display: block;
+  margin-top: 12px;
+}
+
+.time-item:nth-child(2):hover .current-time hr{
+  border: 2px solid green;
 }
 
 /* destra */
@@ -455,10 +542,30 @@ footer a{
   color: white;
 }
 
-.settings .settings-item hr{
-  width: 150px;
-  border: 2px solid rgb(98, 98, 98);
-  border-radius: 10px;
+.settings .settings-item{
+  display: flex;
+  justify-content: space-between;
+}
+
+.settings .settings-item:nth-child(4) {
+  width: 55%;
+}
+
+.settings-item:nth-child(4) .time-dot{
+  display: none;
+}
+
+.settings-item:nth-child(4):hover{
+  cursor: pointer;
+}
+
+.settings-item:nth-child(4):hover .time-dot{
+  display: block;
+  margin-top: 12px;
+}
+
+.settings-item:nth-child(4):hover .current-time hr{
+  border: 2px solid green;
 }
 
 @media all and (max-width:1300px) {
@@ -474,31 +581,23 @@ footer a{
     width: 22%;
     min-width: 100px;
   }
-
-  .settings .settings-item hr{
-    width: 80px;
-  }
 }
 
 @media all and (max-width:720px) {
   footer{
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
   .current{
-    width: 30%;
+    width: 28%;
   }
 
   .player{
-    width: 40%;
+    width: 35%;
   }
 
   .settings{
-    width: 30%;
-    min-width: 100px;
+    width: 28%;
   }
 
-  .settings .settings-item hr{
-    width: 80px;
-  }
 }
